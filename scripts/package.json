@@ -1,0 +1,11 @@
+{
+  "name": "blokdenti_front_end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "XDS_STARS",
+  "license": "MIT"
+}

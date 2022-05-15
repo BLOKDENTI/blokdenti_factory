@@ -1,0 +1,57 @@
+dependencies:
+    - smartcontractkit/chainlink-brownie-contracts@0.2.2
+    - OpenZeppelin/openzeppelin-contracts@4.3.2
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.3.2"
+dotenv: .env
+dev_deployment_artifacts: True
+networks:
+  default: development
+  development:
+    all_user_metadata: "0x3194cBDC3dbcd3E11a07892e7bA5c3394048Cc87"
+    all_user_metadata_abi: ${CONTRACT_ABI}
+    gas_limit: max
+    gas_buffer: 1
+    gas_price: 0
+    max_fee: null
+    priority_fee: null
+    reverting_tx_gas_limit: max
+    default_contract_owner: True
+    cmd_settings: null
+    verify: True
+  ganache:
+    all_user_metadata: "0x3194cBDC3dbcd3E11a07892e7bA5c3394048Cc87"
+    verify: False
+  kovan:
+    verify: True
+  ropsten: 
+    verify: True
+    all_user_metadata_abi: ${CONTRACT_ABI}
+wallets:
+  from_key: ${PRIVATE_KEY}
+encrypted_keys:
+  registration_key1: ${REGISTRATION_KEY1}
+  registration_key2: ${REGISTRATION_KEY2}
+  encryption_key1: ${ENCRYPTED_KEY1}
+  encryption_key2: ${ENCRYPTED_KEY2}
+users_contracts:
+  user1: "0xC5D1812068933E598cD9cD3E4dD35B95873003Ef"
+  user_private_key_0: ${USER_PRIVATE_KEY}
+  user_secret_key_0: ${USER_SECRET_KEY}
+  user2: "0xddd0CAaDe64a5d6d35922bD84de14D6A3dc8576F"
+  user_private_key_1: ${USER_PRIVATE_KEY1}
+  user_secret_key_1: ${USER_SECRET_KEY1}
+ipfs_connections:
+  IPFS_CONNECT_URL: "/ip4/127.0.0.1/tcp/5001/http"
+  IPFS_FILE_URL: "http://127.0.0.1:8080/ipfs/"
+  DOMAIN: "http://localhost:5000"
+files_data:
+  iv_0: ${IV_0}
+  iv_1: ${IV_1}
+ipfs_api:
+  pinata_api: ${PINATA_API}
+  pinata_secret: ${PINATA_SECRET}
+  infura_project_id: ${WEB3_INFURA_PROJECT_ID}
+  infura_secret: ${WEB3_INFURA_PROJECT_SECRET}
